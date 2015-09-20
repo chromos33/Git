@@ -34,6 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.searchpage_btn = new System.Windows.Forms.Button();
             this.download_btn = new System.Windows.Forms.Button();
+            this.downloadlistlabel = new System.Windows.Forms.Label();
+            this.LightNovelDownloadList = new System.Windows.Forms.CheckedListBox();
+            this.chapterscan_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LightNovelAvailableField
@@ -44,7 +47,7 @@
             this.LightNovelAvailableField.HorizontalScrollbar = true;
             this.LightNovelAvailableField.Location = new System.Drawing.Point(393, 42);
             this.LightNovelAvailableField.Name = "LightNovelAvailableField";
-            this.LightNovelAvailableField.Size = new System.Drawing.Size(217, 94);
+            this.LightNovelAvailableField.Size = new System.Drawing.Size(217, 139);
             this.LightNovelAvailableField.TabIndex = 0;
             // 
             // LightNovelListLabel
@@ -61,9 +64,11 @@
             // 
             this.SupportedPageList.FormattingEnabled = true;
             this.SupportedPageList.HorizontalScrollbar = true;
+            this.SupportedPageList.Items.AddRange(new object[] {
+            "http://japtem.blogspot.de/"});
             this.SupportedPageList.Location = new System.Drawing.Point(158, 42);
             this.SupportedPageList.Name = "SupportedPageList";
-            this.SupportedPageList.Size = new System.Drawing.Size(217, 94);
+            this.SupportedPageList.Size = new System.Drawing.Size(217, 139);
             this.SupportedPageList.TabIndex = 2;
             // 
             // label1
@@ -87,7 +92,7 @@
             // 
             // download_btn
             // 
-            this.download_btn.Location = new System.Drawing.Point(12, 93);
+            this.download_btn.Location = new System.Drawing.Point(12, 145);
             this.download_btn.Name = "download_btn";
             this.download_btn.Size = new System.Drawing.Size(124, 36);
             this.download_btn.TabIndex = 5;
@@ -95,11 +100,46 @@
             this.download_btn.UseVisualStyleBackColor = true;
             this.download_btn.Click += new System.EventHandler(this.download_btn_Click);
             // 
+            // downloadlistlabel
+            // 
+            this.downloadlistlabel.AutoSize = true;
+            this.downloadlistlabel.Location = new System.Drawing.Point(625, 26);
+            this.downloadlistlabel.Name = "downloadlistlabel";
+            this.downloadlistlabel.Size = new System.Drawing.Size(128, 13);
+            this.downloadlistlabel.TabIndex = 7;
+            this.downloadlistlabel.Text = "LightNovel Download List";
+            this.downloadlistlabel.UseMnemonic = false;
+            // 
+            // LightNovelDownloadList
+            // 
+            this.LightNovelDownloadList.AccessibleDescription = "Light Novels Downloadlist";
+            this.LightNovelDownloadList.AccessibleName = "LightNoveldownloadField";
+            this.LightNovelDownloadList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LightNovelDownloadList.FormattingEnabled = true;
+            this.LightNovelDownloadList.HorizontalScrollbar = true;
+            this.LightNovelDownloadList.Location = new System.Drawing.Point(628, 42);
+            this.LightNovelDownloadList.Name = "LightNovelDownloadList";
+            this.LightNovelDownloadList.Size = new System.Drawing.Size(217, 139);
+            this.LightNovelDownloadList.TabIndex = 6;
+            // 
+            // chapterscan_btn
+            // 
+            this.chapterscan_btn.Location = new System.Drawing.Point(12, 94);
+            this.chapterscan_btn.Name = "chapterscan_btn";
+            this.chapterscan_btn.Size = new System.Drawing.Size(123, 36);
+            this.chapterscan_btn.TabIndex = 8;
+            this.chapterscan_btn.Text = "Scan Chapters";
+            this.chapterscan_btn.UseVisualStyleBackColor = true;
+            this.chapterscan_btn.Click += new System.EventHandler(this.chapterscan_btn_Click);
+            // 
             // LightNovelDownloadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 154);
+            this.ClientSize = new System.Drawing.Size(886, 291);
+            this.Controls.Add(this.chapterscan_btn);
+            this.Controls.Add(this.downloadlistlabel);
+            this.Controls.Add(this.LightNovelDownloadList);
             this.Controls.Add(this.download_btn);
             this.Controls.Add(this.searchpage_btn);
             this.Controls.Add(this.label1);
@@ -123,6 +163,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button searchpage_btn;
         private System.Windows.Forms.Button download_btn;
+        private System.Windows.Forms.Label downloadlistlabel;
+        private System.Windows.Forms.CheckedListBox LightNovelDownloadList;
+        private System.Windows.Forms.Button chapterscan_btn;
     }
 }
 
